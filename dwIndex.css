@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+	--mainBg: linear-gradient(to bottom, #0066ff 0%, #cc66ff 100%);
+	--secBg: #F2F2F2;
+	--mainBlue: #0066FF;
+}
+
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+}
+
+/*utilites start*/
+
+.flxRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flxCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*utilites end*/
+
+#wrapper, header {
+	width: 100%;
+	background: var(--mainBg);
+}
+
+header {
+	position: relative;
+	height: 10rem;
+}
+
+#logoDiv, #newWalletDiv {
+	position: absolute;
+}
+
+#logoDiv {
+	top: 1vh;
+	left: 1vh;
+}
+
+#logoDiv img {
+	border-radius: 1rem;
+}
+
+#logoTxt p {
+	margin-left: 1rem;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+
+#newWalletDiv {
+	top: 3.5vh;
+	right: 1vh;
+}
+
+#newWalletDiv input {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	width: 10rem;
+	height: 3rem;
+}

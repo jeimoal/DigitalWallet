@@ -14,7 +14,7 @@ valid : () => {
 	if (dwLogin.lUser.value !== 'USERNAME' && dwLogin.lPass.value !== 'USERNAME') {
 		alert('username or password are incorrect');
 	} else {
-		alert('loged in'); //will be changed to redirected the page
+		open('dwIndex.html');
 	};
 },
 

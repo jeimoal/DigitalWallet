@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+	--mainBg: linear-gradient(to bottom, #0066ff 0%, #cc66ff 100%);
+	--secBg: #F2F2F2;
+	--mainBlue: #0066FF;
+}
+
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background: var(--mainBg);
+}
+
+/*utilites start*/
+
+.flxRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flxCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*utilites end*/
+
+#wrapper {
+	width: 30rem;
+	height: 20rem;
+	padding: 1rem;
+	margin: 0 auto;
+	background: var(--secBg);
+	border-radius: 1rem;
+}
+
+form, #session {
+	width: 100%;
+}
+
+#session span {
+	font-size: 2.3rem;
+	text-transform: capitalize;
+}
+
+#session img {
+	width: 60px;
+	height: 60px;
+}
+
+input {
+	width: 80%;
+	height: 2.5rem;
+	text-transform: uppercase;
+}
+
+input[type="submit"] {
+	color: var(--secBg);
+	background-color: var(--mainBlue);
+	border-style: none;
+}
+
+#username, #password {
+	padding: 0.5rem;
+}
+
+#username, #submitBtn {
+	margin: 1vh auto;
+}
+
+#tip {
+	color: red;
+}

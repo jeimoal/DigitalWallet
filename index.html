@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="loginStyle.css" rel="stylesheet" type="text/css">
+	<script defer src="login.js"></script>
 	<title>Digital Wallet</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -14,8 +15,8 @@
 			<span>digital wallet login</span>
 		</section>
 		<form id="dwForm" class="flxCol">
-			<input id="username" type="text" placeholder="username" autofocus/>
-			<input id="password" type="password" placeholder="password"/>
+			<input id="username" type="text" placeholder="username" autofocus required/>
+			<input id="password" type="password" placeholder="password" required/>
 			<input id="submitBtn" type="submit" value="submit"/>
 		</form>
 		<span id="tip">username and password is: username</span>

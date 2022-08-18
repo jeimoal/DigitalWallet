@@ -18,6 +18,10 @@ html, body {
 	width: 100%;
 }
 
+html {
+	background: url('bgLogo.png');	
+}
+
 /*utilites start*/
 
 .flxRow {

@@ -11,11 +11,11 @@ init : () => {
 },
 
 valid : () => {
-	if (dwLogin.lUser.value !== 'USERNAME' && dwLogin.lPass.value !== 'USERNAME') {
-		alert('username or password are incorrect');
-	} else {
+	if (dwLogin.lUser.value === 'USERNAME' && dwLogin.lPass.value === 'USERNAME') {
 		open('dwIndex.html');
-	};
+	} else if (dwLogin.lUser.value !== 'USERNAME' && dwLogin.lPass.value !== 'USERNAME') {
+		alert('username or password are incorrect');
+	}
 },
 
 }

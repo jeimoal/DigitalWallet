@@ -3,11 +3,6 @@ blc : 0, //balance value
 rsvd : 0, //reserved value
 limit : 0, //define limit per deposit
 
-addValueBtn : null, //acces html button
-wdwValueBtn : null, //acces html button
-svnValueBtn : null, //acces html button
-rsvdValueBtn : null, //acces html button
-
 init : () => {
 	newBtn = document.querySelector('#newBtn');
 	newBtn.addEventListener('click', nWallet.newWallet)

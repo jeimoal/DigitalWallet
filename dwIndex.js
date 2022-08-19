@@ -8,11 +8,6 @@ wdwValueBtn : null, //acces html button
 svnValueBtn : null, //acces html button
 rsvdValueBtn : null, //acces html button
 
-addValueIpt : null, //acces html input
-wdwValueIpt : null, //acces html input
-svnValueIpt : null, //acces html input
-rsvdValueIpt : null, //acces html input
-
 init : () => {
 	newBtn = document.querySelector('#newBtn');
 	newBtn.addEventListener('click', nWallet.newWallet)
@@ -131,12 +126,6 @@ newWallet : () => {
 	reserved.appendChild(display);
 	btmContDiv.appendChild(reserved);
 
-	//passing buttons to atributtes
-	nWallet.addValueBtn = addBtn;
-	nWallet.wdwValueBtn = wdwBtn;
-	nWallet.svnValueBtn = svnBtn;
-	nWallet.rsvdValueBtn = rsvdBtn;
-
 	//add value function
 	addBtn.addEventListener('click', function () {
 	let vl = parseFloat(Number(prompt()));
@@ -148,7 +137,7 @@ newWallet : () => {
 	});
 
 	//withdraw value function
-	wdwBtn.addEventListener('click', function () {
+	wdwBtn.addEventListener('click', function () {	
 	let vl = parseFloat(Number(prompt()));
 		//check if the entry is a number and is between the account withdraw limit
 		if(Number.isFinite(vl) && vl <= nWallet.limit) {
@@ -162,9 +151,39 @@ newWallet : () => {
 	valorTxt.textContent = 'R$' + nWallet.blc;
 	});
 
+	//saving value function
+	svnBtn.addEventListener('click', function() {
+	let vl = parseFloat(Number(prompt()));
+		//check if the entry is a number
+		if(Number.isFinite(vl)) {
+			//aditional validation to check if there's balance available
+			if(vl > nWallet.blc) {
+				alert('value not available');
+			} else {
+				nWallet.blc -= vl;
+				nWallet.rsvd += vl;
+			}
+		}
+	valorTxt.textContent = 'R$' + nWallet.blc;
+	rsvdValue.textContent = 'R$' + nWallet.rsvd;
+	});
 
-	svnBtn.addEventListener('click', nWallet.svnValueM);
-	rsvdBtn.addEventListener('click', nWallet.rsvdValueM);
+	//withdraw from reserve function
+	rsvdBtn.addEventListener('click', function () {	
+	let vl = parseFloat(Number(prompt()));
+		//check if the entry is a number and is between the account withdraw limit
+		if(Number.isFinite(vl)) {
+			//aditional validation to check if there's reserve available
+			if(vl > nWallet.rsvd) {
+				alert('value not available');
+			} else {
+				nWallet.rsvd -= vl;
+				nWallet.blc += vl;
+			}
+		}
+	rsvdValue.textContent = 'R$' + nWallet.rsvd;
+	valorTxt.textContent = 'R$' + nWallet.blc;
+	});
 },
 
 }

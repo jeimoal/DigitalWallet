@@ -16,22 +16,21 @@ newWallet : () => {
 	//fig elements
 	binFig = document.createElement('img');
 	binFig.setAttribute('class', 'binFig')
-	cardDiv.appendChild(binFig);
-
 	trashFig = document.createElement('img');
 	trashFig.setAttribute('class', 'trashFig')
-	cardDiv.appendChild(trashFig);
-
 	circleFig = document.createElement('img');
 	circleFig.setAttribute('class', 'circleFig')
+
+	cardDiv.appendChild(binFig);
+	cardDiv.appendChild(trashFig);
 	cardDiv.appendChild(circleFig);
+
+	//TOP CONTAINER ELEMENTS
 
 	//create top container
 	topContDiv = document.createElement('div');
 	topContDiv.setAttribute('class', 'topCont');
 	cardDiv.appendChild(topContDiv);
-
-	//TOP CONTAINER ELEMENTS
 
 	//top text
 	topTxtDiv = document.createElement('div');
@@ -40,6 +39,7 @@ newWallet : () => {
 	dwTxt.textContent = 'digital wallet';
 	mwTxt = document.createElement('p');
 	mwTxt.textContent = 'my wallet';
+
 	topTxtDiv.appendChild(dwTxt);
 	topTxtDiv.appendChild(mwTxt);
 	topContDiv.appendChild(topTxtDiv);
@@ -51,9 +51,34 @@ newWallet : () => {
 	blcTxt.textContent = 'account balance';
 	valorTxt = document.createElement('p');
 	valorTxt.textContent = 'R$50.000';
+	display = document.createElement('img');
+	display.setAttribute('class', 'eyeFig');
+
 	accTxtDiv.appendChild(blcTxt);
 	accTxtDiv.appendChild(valorTxt);
+	accTxtDiv.appendChild(display);
 	topContDiv.appendChild(accTxtDiv);
+
+	//buttons
+	btnDiv = document.createElement('div');
+	btnDiv.setAttribute('class', 'btnDiv');
+	addBtn = document.createElement('button');
+	addBtn.setAttribute('class', 'addBtn');
+	addBtn.textContent = 'add value';
+	wdwBtn = document.createElement('button');
+	wdwBtn.setAttribute('class', 'wdwBtn');
+	wdwBtn.textContent = 'withdraw value';
+	svnBtn = document.createElement('button');
+	svnBtn.setAttribute('class', 'svnBtn');
+	svnBtn.textContent = 'saving';
+
+	btnDiv.appendChild(addBtn);
+	btnDiv.appendChild(wdwBtn);
+	btnDiv.appendChild(svnBtn);
+	topContDiv.appendChild(btnDiv);
+
+
+	//MID CONTAINER ELEMENTS
 
 	//create mid container
 	midContDiv = document.createElement('div');

@@ -85,10 +85,37 @@ newWallet : () => {
 	midContDiv.setAttribute('class', 'midCont');
 	cardDiv.appendChild(midContDiv);
 
+	//img
+	fig = document.createElement('img');
+	fig.setAttribute('class', 'centerImg');
+	midContDiv.appendChild(fig);
+
+	//BOTTTOM CONTAINER ELEMENTS
+
 	//create bottom container
 	btmContDiv = document.createElement('div');
 	btmContDiv.setAttribute('class', 'btmCont');
 	cardDiv.appendChild(btmContDiv);
+	
+	//container elements
+	reserved = document.createElement('div');
+	reserved.setAttribute('class', 'reservedDiv');
+	rsvdTxt = document.createElement('p');
+	rsvdTxt.textContent = 'reserved available';
+	rsvdValue = document.createElement('p');
+	rsvdValue.textContent = 'R$50.000';
+	display = document.createElement('img');
+	display.setAttribute('class', 'eyeFig');
+	rsvdBtn = document.createElement('button');
+	rsvdBtn.setAttribute('class', 'rsvdBtn');
+	rsvdBtn.textContent = "withdraw";
+
+	reserved.appendChild(rsvdTxt);
+	reserved.appendChild(rsvdValue);
+	reserved.appendChild(rsvdBtn);
+	reserved.appendChild(display);
+	btmContDiv.appendChild(reserved);
+	
 },
 
 }

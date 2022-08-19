@@ -124,18 +124,18 @@ newWallet : () => {
 	//add value function
 	addBtn.addEventListener('click', function () {
 	let vl = parseFloat(Number(prompt()));
-		//check if the entry is a number and is between the account deposit limit
-		if(Number.isFinite(vl) && vl <= nWallet.limit) {
+		//check if the entry is a positive number and is between the account deposit limit
+		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			nWallet.blc += vl;
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc;
+	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
 	});
 
 	//withdraw value function
 	wdwBtn.addEventListener('click', function () {	
 	let vl = parseFloat(Number(prompt()));
-		//check if the entry is a number and is between the account withdraw limit
-		if(Number.isFinite(vl) && vl <= nWallet.limit) {
+		//check if the entry is a positive number and is between the account withdraw limit
+		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			//aditional validation to check if there's balance available
 			if(vl > nWallet.blc) {
 				alert('value not available');
@@ -143,14 +143,14 @@ newWallet : () => {
 				nWallet.blc -= vl;
 			}
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc;
+	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
 	});
 
 	//saving value function
 	svnBtn.addEventListener('click', function() {
 	let vl = parseFloat(Number(prompt()));
 		//check if the entry is a number
-		if(Number.isFinite(vl)) {
+		if(Number.isFinite(vl) && Math.sign(vl) != -1) {
 			//aditional validation to check if there's balance available
 			if(vl > nWallet.blc) {
 				alert('value not available');
@@ -159,15 +159,15 @@ newWallet : () => {
 				nWallet.rsvd += vl;
 			}
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc;
-	rsvdValue.textContent = 'R$' + nWallet.rsvd;
+	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
+	rsvdValue.textContent = 'R$' + nWallet.rsvd.toFixed(2);
 	});
 
 	//withdraw from reserve function
 	rsvdBtn.addEventListener('click', function () {	
 	let vl = parseFloat(Number(prompt()));
 		//check if the entry is a number and is between the account withdraw limit
-		if(Number.isFinite(vl)) {
+		if(Number.isFinite(vl) && Math.sign(vl) != -1 ) {
 			//aditional validation to check if there's reserve available
 			if(vl > nWallet.rsvd) {
 				alert('value not available');
@@ -176,8 +176,8 @@ newWallet : () => {
 				nWallet.blc += vl;
 			}
 		}
-	rsvdValue.textContent = 'R$' + nWallet.rsvd;
-	valorTxt.textContent = 'R$' + nWallet.blc;
+	rsvdValue.textContent = 'R$' + nWallet.rsvd.toFixed(2);
+	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
 	});
 },
 

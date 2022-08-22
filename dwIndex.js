@@ -135,6 +135,8 @@ newWallet : () => {
 		//check if the entry is a positive number and is between the account deposit limit
 		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			nWallet.blc += vl;
+		} else if(vl > nWallet.limit) {
+			alert(`Value exceded the account limit for deposit. Limit: ${nWallet.limit}`)
 		}
 	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 	});
@@ -145,8 +147,8 @@ newWallet : () => {
 		//check if the entry is a positive number and is between the account withdraw limit
 		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			//aditional validation to check if there's balance available
-			if(vl > nWallet.blc) {
-				alert('value not available');
+			if (vl > nWallet.blc) {
+				alert('Value not available');
 			} else {
 				nWallet.blc -= vl;
 			}

@@ -123,17 +123,17 @@ newWallet : () => {
 
 	//add value function
 	addBtn.addEventListener('click', function () {
-	let vl = parseFloat(Number(prompt()));
+	let vl = parseFloat(Number(prompt('Enter the amount')));
 		//check if the entry is a positive number and is between the account deposit limit
 		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			nWallet.blc += vl;
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
+	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 	});
 
 	//withdraw value function
 	wdwBtn.addEventListener('click', function () {	
-	let vl = parseFloat(Number(prompt()));
+	let vl = parseFloat(Number(prompt('Enter the amount')));
 		//check if the entry is a positive number and is between the account withdraw limit
 		if(Number.isFinite(vl) && Math.sign(vl) != -1 && vl <= nWallet.limit) {
 			//aditional validation to check if there's balance available
@@ -143,12 +143,12 @@ newWallet : () => {
 				nWallet.blc -= vl;
 			}
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
+	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 	});
 
 	//saving value function
 	svnBtn.addEventListener('click', function() {
-	let vl = parseFloat(Number(prompt()));
+	let vl = parseFloat(Number(prompt('Enter the amount')));
 		//check if the entry is a number
 		if(Number.isFinite(vl) && Math.sign(vl) != -1) {
 			//aditional validation to check if there's balance available
@@ -159,13 +159,13 @@ newWallet : () => {
 				nWallet.rsvd += vl;
 			}
 		}
-	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
-	rsvdValue.textContent = 'R$' + nWallet.rsvd.toFixed(2);
+	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
+	rsvdValue.textContent = `R$${nWallet.rsvd.toFixed(2)}`;
 	});
 
 	//withdraw from reserve function
 	rsvdBtn.addEventListener('click', function () {	
-	let vl = parseFloat(Number(prompt()));
+	let vl = parseFloat(Number(prompt('Enter the amount')));
 		//check if the entry is a number and is between the account withdraw limit
 		if(Number.isFinite(vl) && Math.sign(vl) != -1 ) {
 			//aditional validation to check if there's reserve available
@@ -176,8 +176,8 @@ newWallet : () => {
 				nWallet.blc += vl;
 			}
 		}
-	rsvdValue.textContent = 'R$' + nWallet.rsvd.toFixed(2);
-	valorTxt.textContent = 'R$' + nWallet.blc.toFixed(2);
+	rsvdValue.textContent = `R$${nWallet.rsvd.toFixed(2)}`;
+	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 	});
 },
 

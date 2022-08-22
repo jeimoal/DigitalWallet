@@ -59,7 +59,7 @@ newWallet : () => {
 	blcTxt.textContent = 'account balance';
 	blcTxt.setAttribute('class', 'blcTxt');
 	valorTxt = document.createElement('p');
-	valorTxt.textContent = `R$${nWallet.blc}`;
+	valorTxt.textContent = `R$${nWallet.blc}.00`;
 	valorTxt.setAttribute('class', 'valorTxt');
 	display = document.createElement('img');
 	display.setAttribute('class', 'eyeFig');
@@ -116,7 +116,7 @@ newWallet : () => {
 	rsvdTxt.textContent = 'reserved available';
 	rsvdValue = document.createElement('p');
 	rsvdValue.setAttribute('class', 'rsvdVal');
-	rsvdValue.textContent = `R$${nWallet.rsvd}`;
+	rsvdValue.textContent = `R$${nWallet.rsvd}.00`;
 	display = document.createElement('img');
 	display.setAttribute('class', 'eyeFig');
 	rsvdBtn = document.createElement('button');

@@ -5,7 +5,7 @@ limit : 0, //define limit per deposit
 
 init : () => {
 	newBtn = document.querySelector('#newBtn');
-	newBtn.addEventListener('click', nWallet.newWallet)
+	newBtn.addEventListener('click', nWallet.newWallet())
 },
 
 newWallet : () => {
@@ -20,16 +20,22 @@ newWallet : () => {
 	walletsDiv.appendChild(cardDiv);
 
 	//fig elements
-	binFig = document.createElement('img');
-	binFig.setAttribute('class', 'trashFig')
-	trashFig = document.createElement('img');
-	trashFig.setAttribute('class', 'binaryFig')
-	circleFig = document.createElement('img');
-	circleFig.setAttribute('class', 'circleFig')
+	trashIcon = document.createElement('i');
+	trashIcon.setAttribute('id', 'trashIcon')
+	trashIcon.setAttribute('class', 'material-icons')
+	trashIcon.textContent = 'delete';
+	binaryIcon = document.createElement('i');
+	binaryIcon.setAttribute('id', 'binaryIcon')
+	binaryIcon.setAttribute('class', 'material-icons')
+	binaryIcon.textContent = 'fingerprint';
+	circleIcon = document.createElement('i');
+	circleIcon.setAttribute('id', 'circleIcon');
+	circleIcon.setAttribute('class', 'material-icons');
+	circleIcon.textContent = 'donut_large';
 
-	cardDiv.appendChild(binFig);
-	cardDiv.appendChild(trashFig);
-	cardDiv.appendChild(circleFig);
+	cardDiv.appendChild(binaryIcon);
+	cardDiv.appendChild(trashIcon);
+	cardDiv.appendChild(circleIcon);
 
 	//TOP CONTAINER ELEMENTS
 
@@ -61,12 +67,13 @@ newWallet : () => {
 	valorTxt = document.createElement('p');
 	valorTxt.textContent = `R$${nWallet.blc}.00`;
 	valorTxt.setAttribute('class', 'valorTxt');
-	display = document.createElement('img');
-	display.setAttribute('class', 'eyeFig');
+	dispIcon = document.createElement('i');
+	dispIcon.setAttribute('class', 'material-icons');
+	dispIcon.textContent = 'visibility';
 
 	accTxtDiv.appendChild(blcTxt);
 	accTxtDiv.appendChild(valorTxt);
-	accTxtDiv.appendChild(display);
+	accTxtDiv.appendChild(dispIcon);
 	topContDiv.appendChild(accTxtDiv);
 
 	//buttons
@@ -96,9 +103,9 @@ newWallet : () => {
 	cardDiv.appendChild(midContDiv);
 
 	//img
-	fig = document.createElement('img');
-	fig.setAttribute('class', 'centerImg');
-	fig.setAttribute('src', 'bgLogo.png');
+	fig = document.createElement('i');
+	fig.setAttribute('class', 'material-icons');
+	fig.textContent = 'language';
 	midContDiv.appendChild(fig);
 
 	//BOTTTOM CONTAINER ELEMENTS
@@ -117,8 +124,9 @@ newWallet : () => {
 	rsvdValue = document.createElement('p');
 	rsvdValue.setAttribute('class', 'rsvdVal');
 	rsvdValue.textContent = `R$${nWallet.rsvd}.00`;
-	display = document.createElement('img');
-	display.setAttribute('class', 'eyeFig');
+	displayEye = document.createElement('i');
+	displayEye.setAttribute('class', 'material-icons');
+	displayEye.textContent = 'visibility';
 	rsvdBtn = document.createElement('button');
 	rsvdBtn.setAttribute('class', 'rsvdBtn');
 	rsvdBtn.textContent = "withdraw";
@@ -126,7 +134,7 @@ newWallet : () => {
 	reserved.appendChild(rsvdTxt);
 	reserved.appendChild(rsvdValue);
 	reserved.appendChild(rsvdBtn);
-	reserved.appendChild(display);
+	reserved.appendChild(displayEye);
 	btmContDiv.appendChild(reserved);
 
 	//add value function

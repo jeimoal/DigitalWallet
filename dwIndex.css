@@ -55,7 +55,8 @@ html, body {
 	margin-top: 1rem;
 }
 
-.addBtn, .wdwBtn, .svnBtn, .rsvdBtn {
+button {
+	cursor: pointer;
 	width: 12rem;
 	height: 2.5rem;
 	margin: 0.5rem;
@@ -88,29 +89,30 @@ html, body {
 
 /*figs layout start*/
 
-.binaryFig, .trashFig, .circleFig {
+#trashIcon {
+	cursor: pointer;
 	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: var(--txtColorMain);
 }
 
-.trashFig {
-	width: 5rem;
-	height: 5rem;
-	top: 0;
-	left: 0;
+#binaryIcon {
+	position: absolute;
+	font-size: 7rem;
+	color: silver;
+	bottom: 15px;
+	left: 15px;
+	opacity: 0.2;
 }
 
-.binaryFig {
-	width: 7rem;
-	height: 7rem;
+#circleIcon {
+	position: absolute;
+	font-size: 7rem;
+	color: silver;
 	top: 0;
 	right: 0;
-}
-
-.circleFig {
-	width: 7rem;
-	height: 7rem;
-	bottom: 0;
-	left: 0;
+	opacity: 0.1;
 }
 
 /*figs layout end*/
@@ -137,8 +139,8 @@ header {
 	left: 1vh;
 }
 
-#logoDiv img {
-	border-radius: 1rem;
+#logoDiv i {
+	font-size: 6.2rem;
 }
 
 #logoTxt p {
@@ -221,17 +223,31 @@ header {
 	color: var(--txtColorMain);
 }
 
+.accTxtDiv {
+	position: relative;
+	width: 60%;
+}
+
+.accTxtDiv i {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+	color: var(--txtColorMain);
+}
+
 /*mid container layout*/
 
 .midCont {
+	position: relative;
 	width: 100%;
 	margin-top: 4rem;
 }
 
-.midCont img{
-	max-width: 100%;
-	height: auto;
-
+.midCont i {
+	position: absolute;
+	font-size: 8rem;
+	opacity: .8;
 }
 
 /*bottom container layout*/
@@ -252,5 +268,19 @@ header {
 
 .rsvdVal {
 	font-size: 4rem;
+	color: var(--txtColorMain);
+}
+
+.reservedDiv {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.reservedDiv i {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	bottom: 45px;
 	color: var(--txtColorMain);
 }

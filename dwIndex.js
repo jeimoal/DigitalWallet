@@ -9,20 +9,21 @@ init : () => {
 },
 
 newWallet : () => {
+	newBtn.disabled = true;
 	nWallet.blc = 0;
 	nWallet.limit = 5000;
 
 	//create wallet container
 	walletsDiv = document.querySelector('#walletsDiv');
 	cardDiv = document.createElement('div');
-	cardDiv.setAttribute('class', 'container');
+	cardDiv.setAttribute('class', 'container flxCol');
 	walletsDiv.appendChild(cardDiv);
 
 	//fig elements
 	binFig = document.createElement('img');
-	binFig.setAttribute('class', 'binFig')
+	binFig.setAttribute('class', 'trashFig')
 	trashFig = document.createElement('img');
-	trashFig.setAttribute('class', 'trashFig')
+	trashFig.setAttribute('class', 'binaryFig')
 	circleFig = document.createElement('img');
 	circleFig.setAttribute('class', 'circleFig')
 
@@ -34,15 +35,17 @@ newWallet : () => {
 
 	//create top container
 	topContDiv = document.createElement('div');
-	topContDiv.setAttribute('class', 'topCont');
+	topContDiv.setAttribute('class', 'topCont flxCol');
 	cardDiv.appendChild(topContDiv);
 
 	//top text
 	topTxtDiv = document.createElement('div');
-	topTxtDiv.setAttribute('class', 'topTxtDiv');
+	topTxtDiv.setAttribute('class', 'topTxtDiv flxCol');
 	dwTxt = document.createElement('p');
+	dwTxt.setAttribute('class', 'dwTxt');
 	dwTxt.textContent = 'digital wallet';
 	mwTxt = document.createElement('p');
+	mwTxt.setAttribute('class', 'mwTxt');
 	mwTxt.textContent = 'my wallet';
 
 	topTxtDiv.appendChild(dwTxt);
@@ -51,11 +54,13 @@ newWallet : () => {
 
 	//acc balance elements
 	accTxtDiv = document.createElement('div');
-	accTxtDiv.setAttribute('class', 'accTxtDiv');
+	accTxtDiv.setAttribute('class', 'accTxtDiv flxCol');
 	blcTxt = document.createElement('p');
 	blcTxt.textContent = 'account balance';
+	blcTxt.setAttribute('class', 'blcTxt');
 	valorTxt = document.createElement('p');
-	valorTxt.textContent = 'R$' + nWallet.blc;
+	valorTxt.textContent = `R$${nWallet.blc}`;
+	valorTxt.setAttribute('class', 'valorTxt');
 	display = document.createElement('img');
 	display.setAttribute('class', 'eyeFig');
 
@@ -66,7 +71,7 @@ newWallet : () => {
 
 	//buttons
 	btnDiv = document.createElement('div');
-	btnDiv.setAttribute('class', 'btnDiv');
+	btnDiv.setAttribute('class', 'btnDiv flxRow');
 	addBtn = document.createElement('button');
 	addBtn.setAttribute('class', 'addBtn');
 	addBtn.textContent = 'add value';
@@ -87,12 +92,13 @@ newWallet : () => {
 
 	//create mid container
 	midContDiv = document.createElement('div');
-	midContDiv.setAttribute('class', 'midCont');
+	midContDiv.setAttribute('class', 'midCont flxRow');
 	cardDiv.appendChild(midContDiv);
 
 	//img
 	fig = document.createElement('img');
 	fig.setAttribute('class', 'centerImg');
+	fig.setAttribute('src', 'bgLogo.png');
 	midContDiv.appendChild(fig);
 
 	//BOTTTOM CONTAINER ELEMENTS
@@ -104,11 +110,13 @@ newWallet : () => {
 
 	//container elements
 	reserved = document.createElement('div');
-	reserved.setAttribute('class', 'reservedDiv');
+	reserved.setAttribute('class', 'reservedDiv flxCol');
 	rsvdTxt = document.createElement('p');
+	rsvdTxt.setAttribute('class', 'rsvdTxt');
 	rsvdTxt.textContent = 'reserved available';
 	rsvdValue = document.createElement('p');
-	rsvdValue.textContent = 'R$' + nWallet.rsvd;
+	rsvdValue.setAttribute('class', 'rsvdVal');
+	rsvdValue.textContent = `R$${nWallet.rsvd}`;
 	display = document.createElement('img');
 	display.setAttribute('class', 'eyeFig');
 	rsvdBtn = document.createElement('button');

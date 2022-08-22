@@ -4,6 +4,12 @@
 	--mainBg: linear-gradient(to bottom, #0066ff 0%, #cc66ff 100%);
 	--secBg: #F2F2F2;
 	--mainBlue: #0066FF;
+	--txtColorMain: #262626;
+	--txtColorSec: #F2F2F2;
+	--btnBgAdd: #70AD47;
+	--btnBgWitV: #C00000;
+	--btnBgSav: #0066FF;
+	--btnBgWitR: #FF6600;
 }
 
 * {
@@ -40,8 +46,79 @@ html, body {
 
 /*utilites end*/
 
+
+/*buttons layout start*/
+
+.btnDiv {
+	flex-flow: row wrap;
+	width: 80%;
+	margin-top: 1rem;
+}
+
+.addBtn, .wdwBtn, .svnBtn, .rsvdBtn {
+	width: 10rem;
+	height: 2.5rem;
+	margin: 0.5rem;
+	text-transform: capitalize;
+	border-style: none;
+	color: var(--txtColorSec);
+}
+
+.addBtn {
+	margin-right: 1rem;
+	background-color: var(--btnBgAdd);
+}
+
+.wdwBtn {
+	margin-left: 1rem;
+	background-color: var(--btnBgWitV);
+}
+
+.svnBtn {
+	margin-top: 1rem;
+	background-color: var(--btnBgSav);
+}
+
+.rsvdBtn {
+	background-color: var(--btnBgWitR);
+}
+
+/*buttons layout end*/
+
+/*figs layout start*/
+
+.binaryFig, .trashFig, .circleFig {
+	position: absolute;
+}
+
+.trashFig {
+	width: 5rem;
+	height: 5rem;
+	top: 0;
+	left: 0;
+}
+
+.binaryFig {
+	width: 7rem;
+	height: 7rem;
+	top: 0;
+	right: 0;
+}
+
+.circleFig {
+	width: 7rem;
+	height: 7rem;
+	bottom: 0;
+	left: 0;
+}
+
+/*figs layout end*/
+
 #wrapper, header {
 	width: 100%;
+}
+
+#wrapper header {
 	background: var(--mainBg);
 }
 
@@ -81,5 +158,98 @@ header {
 	height: 3rem;
 }
 
-/*new wallet layout*/
+/*wallet layout*/
 
+#walletsDiv {
+	margin-top: 2rem;
+	background-color: white;
+}
+
+.container {
+	position: relative;
+	justify-content: space-around;
+	width: 350px;
+	height: 500px;
+	background: var(--mainBg);
+	border-radius: 1rem;
+	box-shadow: 3px 3px 3px silver;
+}
+
+/*container sizes*/
+
+.topCont, .btmCont {
+	height: 40%;
+}
+
+.midCont {
+	height: 20%;
+}
+
+/*top container layout*/
+
+.topCont {
+	margin-top: 4.5rem;
+}
+
+.topTxtDiv {
+	margin-bottom: 3rem;
+}
+
+.dwTxt {
+	font-size:2.7rem;
+	text-transform: uppercase;
+	color: var(--txtColorSec);
+}
+
+.mwTxt {
+	font-size:1.7rem;
+	color: var(--txtColorMain);
+}
+
+.mwTxt::first-letter, .blcTxt::first-letter {
+	text-transform: capitalize;
+}
+
+.blcTxt {
+	font-size:1.8rem;
+	color: var(--txtColorMain);
+}
+
+.valorTxt {
+	font-size:4rem;
+	color: var(--txtColorMain);
+}
+
+/*mid container layout*/
+
+.midCont {
+	width: 100%;
+	margin-top: 4rem;
+}
+
+.midCont img{
+	max-width: 100%;
+	height: auto;
+
+}
+
+/*bottom container layout*/
+
+.btmCont {
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.rsvdTxt {
+	font-size: 1.8rem;
+}
+
+.rsvdTxt::first-letter {
+	text-transform: capitalize;
+	color: var(--txtColorMain);
+}
+
+.rsvdVal {
+	font-size: 4rem;
+	color: var(--txtColorMain);
+}

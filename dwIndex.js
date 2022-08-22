@@ -5,7 +5,7 @@ limit : 0, //define limit per deposit
 
 init : () => {
 	newBtn = document.querySelector('#newBtn');
-	newBtn.addEventListener('click', nWallet.newWallet())
+	newBtn.addEventListener('click', nWallet.newWallet)
 },
 
 newWallet : () => {

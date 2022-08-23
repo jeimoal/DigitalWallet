@@ -68,6 +68,7 @@ newWallet : () => {
 	valorTxt.textContent = `R$${nWallet.blc}.00`;
 	valorTxt.setAttribute('class', 'valorTxt');
 	dispIcon = document.createElement('i');
+	dispIcon.setAttribute('id', 'sh-top');
 	dispIcon.setAttribute('class', 'material-icons');
 	dispIcon.textContent = 'visibility';
 
@@ -102,7 +103,7 @@ newWallet : () => {
 	midContDiv.setAttribute('class', 'midCont flxRow');
 	cardDiv.appendChild(midContDiv);
 
-	//img
+	//center icon
 	fig = document.createElement('i');
 	fig.setAttribute('class', 'material-icons');
 	fig.textContent = 'language';
@@ -197,6 +198,36 @@ newWallet : () => {
 	rsvdValue.textContent = `R$${nWallet.rsvd.toFixed(2)}`;
 	valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 	});
+
+//add delete function
+trashIcon.addEventListener('click', function () {
+	this.parentElement.style.display = 'none';
+	newBtn.disabled = false;
+});
+
+//add show/hide acc balance function
+dispIcon.addEventListener('click', function () {
+	if(dispIcon.textContent == 'visibility') {
+		valorTxt.textContent = '----';
+		dispIcon.textContent = 'visibility_off';
+	} else {
+		valorTxt.textContent = `R$${nWallet.blc}.00`;
+		dispIcon.textContent = 'visibility';
+	}
+});
+
+//add show/hide reserved value function
+displayEye.addEventListener('click', function () {
+	if(displayEye.textContent == 'visibility') {
+		rsvdValue.textContent = '----';
+		displayEye.textContent = 'visibility_off';
+	} else {
+		rsvdValue.textContent = `R$${nWallet.rsvd}.00`;
+		displayEye.textContent = 'visibility';
+	}
+});
+
+//object end
 },
 
 }

@@ -11,4 +11,7 @@ A primeira página é a área de loggin no sistema, onde o usuário e a senha fo
 <br>
 <b>Logged area - Done!</b><br>
 <br>
+The second page is the area where the user can create a digital wallet.  By clicking a button all html is generated via JavasCript(DOM).<br>
+A segunda página é a área onde o usuário pode criar uma carteira digital. Ao clicar em um botão todo o HTML é gerado via JavasCript(DOM).<br>
+<br>
 <img src="logged.PNG">

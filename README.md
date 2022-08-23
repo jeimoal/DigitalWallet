@@ -1,5 +1,5 @@
 <h1>#Digital Wallet</h1><br>
-You can see at: https://jeimoal.github.io/digitalWallet/<br>
+You can see at: https://jeimoal.github.io/DigitalWallet/<br>
 <br>
 Digital wallet creation, using HTML / CSS / Javascript:<br>
 <br>

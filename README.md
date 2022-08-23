@@ -7,6 +7,6 @@ First screen- Done!<br>
 <br>
 <img src="login.PNG"><br>
 <br>
-Logged area - Currently WIP:<br>
+Logged area - Done!<br>
 <br>
 <img src="logged.PNG">

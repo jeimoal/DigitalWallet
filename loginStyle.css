@@ -83,3 +83,10 @@ input[type="submit"] {
 #tip {
 	color: red;
 }
+
+footer {
+	position: absolute;
+	margin: 0 auto 1vh;
+	font-size: 2rem;
+	bottom: 0;
+}

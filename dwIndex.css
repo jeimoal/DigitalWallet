@@ -34,7 +34,6 @@ html, body {
 	color: silver;
 	opacity: 0.5;
 	top: 50%;
-	right: 50%;
 }
 
 /*utilites start*/
@@ -291,4 +290,13 @@ header {
 	right: 0;
 	bottom: 45px;
 	color: var(--txtColorMain);
+}
+
+/*footer*/
+
+footer {
+	position: absolute;
+	margin: 0 auto 1vh;
+	font-size: 2rem;
+	bottom: 0;
 }

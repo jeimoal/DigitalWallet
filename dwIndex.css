@@ -28,6 +28,15 @@ html, body {
 	width: 100%;
 }
 
+#money {
+	font-size: 4.8rem;
+	position: absolute;
+	color: silver;
+	opacity: 0.5;
+	top: 50%;
+	right: 50%;
+}
+
 /*utilites start*/
 
 .flxRow {

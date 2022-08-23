@@ -10,6 +10,7 @@ init : () => {
 
 newWallet : () => {
 	newBtn.disabled = true;
+	nWallet.rsvd = 0;
 	nWallet.blc = 0;
 	nWallet.limit = 5000;
 

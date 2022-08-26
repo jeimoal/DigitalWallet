@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 :root {
-	--mainBg: linear-gradient(to bottom, #0066ff 0%, #cc66ff 100%);
+	--mainBg: linear-gradient(to bottom, #1a1a1a 0%, #333333 100%);
 	--secBg: #F2F2F2;
 	--mainBlue: #0066FF;
 }
@@ -89,4 +89,5 @@ footer {
 	margin: 0 auto 1vh;
 	font-size: 2rem;
 	bottom: 0;
+	color: gray;
 }

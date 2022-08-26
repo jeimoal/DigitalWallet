@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 :root {
-	--mainBg: linear-gradient(to bottom, #0066ff 0%, #cc66ff 100%);
+	--mainBg: linear-gradient(to bottom, #1a1a1a 0%, #333333 100%);
 	--secBg: #F2F2F2;
 	--mainBlue: #0066FF;
-	--txtColorMain: #262626;
+	--txtColorMain: #a6a6a6;
 	--txtColorSec: #F2F2F2;
 	--btnBgAdd: #70AD47;
 	--btnBgWitV: #C00000;
@@ -31,7 +31,7 @@ html, body {
 #money {
 	font-size: 4.8rem;
 	position: absolute;
-	color: silver;
+	color: var(--txtColorMain);
 	opacity: 0.5;
 	top: 50%;
 }
@@ -144,6 +144,7 @@ header {
 #logoDiv {
 	top: 1vh;
 	left: 1vh;
+	color: silver;
 }
 
 #logoDiv i {
@@ -266,6 +267,7 @@ header {
 
 .rsvdTxt {
 	font-size: 1.8rem;
+	color: var(--txtColorMain)
 }
 
 .rsvdTxt::first-letter {

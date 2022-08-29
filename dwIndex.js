@@ -122,7 +122,7 @@ newWallet : () => {
 	reserved.setAttribute('class', 'reservedDiv flxCol');
 	rsvdTxt = document.createElement('p');
 	rsvdTxt.setAttribute('class', 'rsvdTxt');
-	rsvdTxt.textContent = 'reserved available';
+	rsvdTxt.textContent = 'saving available';
 	rsvdValue = document.createElement('p');
 	rsvdValue.setAttribute('class', 'rsvdVal');
 	rsvdValue.textContent = `R$${nWallet.rsvd}.00`;
@@ -202,8 +202,12 @@ newWallet : () => {
 
 //add delete function
 trashIcon.addEventListener('click', function () {
-	this.parentElement.style.display = 'none';
-	newBtn.disabled = false;
+	if(nWallet.blc != 0) {
+		alert(`You need to empty the account first. Available: R$${nWallet.blc.toFixed(2)}`)
+	} else {
+		this.parentElement.style.display = 'none';
+		newBtn.disabled = false;
+	}
 });
 
 //add show/hide acc balance function
@@ -212,7 +216,7 @@ dispIcon.addEventListener('click', function () {
 		valorTxt.textContent = '----';
 		dispIcon.textContent = 'visibility_off';
 	} else {
-		valorTxt.textContent = `R$${nWallet.blc}.00`;
+		valorTxt.textContent = `R$${nWallet.blc.toFixed(2)}`;
 		dispIcon.textContent = 'visibility';
 	}
 });
@@ -223,7 +227,7 @@ displayEye.addEventListener('click', function () {
 		rsvdValue.textContent = '----';
 		displayEye.textContent = 'visibility_off';
 	} else {
-		rsvdValue.textContent = `R$${nWallet.rsvd}.00`;
+		rsvdValue.textContent = `R$${nWallet.rsvd.toFixed(2)}`;
 		displayEye.textContent = 'visibility';
 	}
 });

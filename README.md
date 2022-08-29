@@ -14,3 +14,6 @@ The second page is the area where the user can create a digital wallet.  By clic
 A segunda página é a área onde o usuário pode criar uma carteira digital. Ao clicar em um botão todo o HTML é gerado via JavasCript(DOM).<br>
 <br>
 <img src="logged.PNG">
+
+What's next:<br>
+* Backend (learning)

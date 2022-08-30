@@ -20,8 +20,27 @@
 			<input id="password" type="password" placeholder="password" required/>
 			<input id="submitBtn" type="submit" value="submit"/>
 		</form>
-		<span id="tip">username and password is: USERNAME</span>
+		<p id="newAccTxt">Need an account? <span id="newAcc">signup</span></p>
 	</div>
+
+	<div id="pswDiv" class="flxCol">
+		<div id="pswContainer" class="flxRow">
+			<form class="flxCol">
+				<input type="text" id="newUsername" name="newUsername" placeholder="username" required/>
+				<input type="password" id="newPassword" name="newPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" placeholder="password" required/>    
+				<input id="sbmtPsw" type="submit" value="submit">
+			</form>
+		</div>
+
+		<div id="message">
+			<h3>Password must contain the following:</h3>
+			<p id="letter" class="invalid">A lowercase letter</p>
+			<p id="capital" class="invalid">A capital (uppercase) letter</p>
+			<p id="number" class="invalid">A number</p>
+			<p id="length" class="invalid">Minimum 6 characters</p>
+		</div>
+	</div>
+
 	<footer>
 		<p>Desenvolvido por <a href="https://jeimoal.github.io/portifolio/" target="_blank">Jeison Moura</a></p>
 	</footer>

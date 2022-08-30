@@ -37,7 +37,7 @@ html, body {
 
 /*utilites end*/
 
-#wrapper {
+#wrapper, #pswDiv {
 	width: 30rem;
 	height: 20rem;
 	padding: 1rem;
@@ -46,7 +46,7 @@ html, body {
 	border-radius: 1rem;
 }
 
-form, #session {
+form, #session, #pswContainer {
 	width: 100%;
 }
 
@@ -63,25 +63,21 @@ form, #session {
 input {
 	width: 80%;
 	height: 2.5rem;
-	text-transform: uppercase;
 }
 
 input[type="submit"] {
 	color: var(--secBg);
 	background-color: var(--mainBlue);
 	border-style: none;
+	text-transform: uppercase;
 }
 
 #username, #password {
 	padding: 0.5rem;
 }
 
-#username, #submitBtn {
+#username, #submitBtn, #sbmtPsw, #newUsername {
 	margin: 1vh auto;
-}
-
-#tip {
-	color: red;
 }
 
 footer {
@@ -90,4 +86,39 @@ footer {
 	font-size: 2rem;
 	bottom: 0;
 	color: gray;
+}
+
+/*create password layout*/
+
+#pswDiv {
+	display: none;
+}
+
+#message {
+	width: 80%;
+}
+
+#newAcc {
+	cursor: pointer;
+	color: var(--mainBlue);
+}
+
+.valid {
+	color: green;
+}
+
+.valid:before {
+	content: "✔";
+	position: relative;
+	left: -1rem;
+}
+
+.invalid {
+	color: red;
+}
+
+.invalid:before {
+	content: "✖";
+	position: relative;
+	left: -1rem;
 }

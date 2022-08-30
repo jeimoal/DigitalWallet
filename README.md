@@ -1,4 +1,4 @@
-<h1>#Digital Wallet</h1><br>
+# Digital Wallet<br>
 You can see at: https://jeimoal.github.io/DigitalWallet/<br>
 <br>
 Digital wallet creation, using HTML / CSS / Javascript:<br>

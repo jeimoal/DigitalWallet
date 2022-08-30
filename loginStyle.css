@@ -80,6 +80,14 @@ input[type="submit"] {
 	margin: 1vh auto;
 }
 
+footer {
+	position: absolute;
+	margin: 0 auto 1vh;
+	font-size: 2rem;
+	bottom: 0;
+	color: gray;
+}
+
 /*create password layout*/
 
 #pswDiv {
@@ -113,20 +121,4 @@ input[type="submit"] {
 	content: "✖";
 	position: relative;
 	left: -1rem;
-}
-
-footer {
-	position: absolute;
-	margin: 0 auto 1vh;
-	font-size: 2rem;
-	bottom: 0;
-	color: gray;
-}
-
-footer p a {
-	color: silver;
-}
-
-footer p a:visited {
-	color: white;
 }

@@ -9,7 +9,7 @@ A primeira página é a área de loggin no sistema, onde o usuário e a senha fo
 <br>
 <img src="login.png"><br>
 <br>
-<b>New user area</b><br>
+<b>New user area - partially done...</b><br>
 New user area, where a new user and password could be created (cannot be used after creation. BackEnd in progress)<br>
 <img src="newuser.png"><br>
 <br>
@@ -17,7 +17,7 @@ New user area, where a new user and password could be created (cannot be used af
 The second page is the area where the user can create a digital wallet.  By clicking a button all html is generated via JavasCript(DOM).<br>
 A segunda página é a área onde o usuário pode criar uma carteira digital. Ao clicar em um botão todo o HTML é gerado via JavasCript(DOM).<br>
 <br>
-<img src="logged.png">
+<img src="logged.PNG">
 
 What's next:<br>
 * Backend (learning...)

@@ -12,6 +12,7 @@ A primeira página é a área de loggin no sistema, onde o usuário e a senha fo
 <b>New user area - partially done...</b><br>
 New user area, where a new user and password could be created (cannot be used after creation. BackEnd in progress)<br>
 Área de novo usuário, onde pode ser criado um novo usuário e senha (não pode ser usado após a criação. BackEnd em andamento)<br>
+<br>
 <img src="newuser.png"><br>
 <br>
 <b>Logged area - Done!</b><br>

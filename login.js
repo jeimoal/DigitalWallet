@@ -1,10 +1,13 @@
-const dwLogin = {
-lUser : null,
-lPass : null,
-lSub : null,
-newAcc : null,
+//Object used to acess the logged area
 
-init : () => {
+const dwLogin = {
+lUser : null, //access html input
+lPass : null, //access html input
+lSub : null, //access html input button
+newAcc : null, //access html
+
+//access the DOM elements and add event handlers
+init : () => {	
 	dwLogin.lUser = document.querySelector('#username');
 	dwLogin.lPass = document.querySelector('#password');
 	dwLogin.lSub = document.querySelector('#submitBtn');
@@ -13,14 +16,24 @@ init : () => {
 	dwLogin.newAcc.addEventListener('click', dwLogin.newUser);
 },
 
+//login validation
 valid : () => {
-	if (dwLogin.lUser.value === 'USERNAME' && dwLogin.lPass.value === 'USERNAME') {
+	//set the default username and password
+	ls = localStorage.setItem('USERNAME', 'USERNAME');
+	
+	//validation to check if the username and password does match
+	if (localStorage.getItem(dwLogin.lUser.value) == dwLogin.lPass.value) {
 		open('dwIndex.html');
-	} else if (dwLogin.lUser.value !== 'USERNAME' && dwLogin.lPass.value !== 'USERNAME') {
-		alert('username or password are incorrect');
-	}
+	} else if (dwLogin.lUser.value == "" || dwLogin.lPass.value == "") {
+		alert('user/password cannot be empty');
+	} else if (localStorage.getItem(dwLogin.lUser.value) != dwLogin.lPass.value) {
+		alert('user or password is incorrect');
+	} else {
+		alert('Error. refresh the page and try again.');
+	};
 },
 
+//hide the login screen and display the new user creation screen
 newUser : () => {
 	wrapper = document.querySelector('#wrapper');
 	pswDiv = document.querySelector('#pswDiv');
@@ -32,12 +45,15 @@ newUser : () => {
 
 };
 
+//Object used to create a new user
+
 const nUser = {
 lUser : null,
 lPsw : null,
 lSub : null,
 message : null,
 
+//access the DOM elements and add event handlers
 init : () => {
 	nUser.lUser = document.querySelector('#newUsername');
 	nUser.lPsw = document.querySelector('#newPassword');
@@ -46,16 +62,17 @@ init : () => {
 	nUser.valid();
 },
 
+//used to access html tags
 valid : () => {
 	msg = document.querySelector('#newPassword');
 	letter = document.querySelector('#letter');
 	capital = document.querySelector('#capital');
 	number = document.querySelector('#number');
 	length = document.querySelector('#length');
+	msg.addEventListener('keyup', checkPassword);
 
-// show tips when start type on the password field
-
-msg.onkeyup = function() {
+//show tips when start type on the password field
+function checkPassword() {
 	// Validate lowercase letters
 	lowerCaseLetters = /[a-z]/g;
 	if(msg.value.match(lowerCaseLetters)) {  
@@ -102,15 +119,3 @@ msg.onkeyup = function() {
 }
 window.addEventListener('load', dwLogin.init);
 window.addEventListener('load', nUser.init);
-
-/* USED TO SHOW THE LOGIN SCREEN
-*sbmtPsw = document.querySelector('#sbmtPsw');
-*sbmtPsw.addEventListener('click', dwLogin.displayLogin);
-*
-*displayLogin : () => {
-*	wrapper = document.querySelector('#wrapper');
-*	pswDiv = document.querySelector('#pswDiv');
-*	wrapper.style.display = 'flex';
-*	pswDiv.style.display = 'none';
-*},
-*/

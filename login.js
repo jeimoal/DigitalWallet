@@ -48,10 +48,10 @@ newUser : () => {
 //Object used to create a new user
 
 const nUser = {
-lUser : null,
-lPsw : null,
-lSub : null,
-message : null,
+lUser : null, //access html input
+lPsw : null, //access html input
+lSub : null, //access html input button
+message : null, //access html element
 
 //access the DOM elements and add event handlers
 init : () => {
@@ -59,11 +59,19 @@ init : () => {
 	nUser.lPsw = document.querySelector('#newPassword');
 	nUser.lSub = document.querySelector('#sbmtPsw');
 	nUser.message = document.querySelector("#message");
-	nUser.valid();
+	nUser.lSub.addEventListener('click', nUser.valid);
+	nUser.spellCheck();
+},
+
+//stores the new username and password, if match the requisits
+valid : () => {
+	if (nUser.lUser.value != "" && nUser.lPsw.value != "" && nUser.lPsw.value.length >= 6) {
+		st = localStorage.setItem(nUser.lUser.value, nUser.lPsw.value);
+	}
 },
 
 //used to access html tags
-valid : () => {
+spellCheck : () => {
 	msg = document.querySelector('#newPassword');
 	letter = document.querySelector('#letter');
 	capital = document.querySelector('#capital');

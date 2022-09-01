@@ -9,7 +9,7 @@ A primeira página é a área de loggin no sistema, onde o usuário e a senha fo
 <br>
 <img src="login.png"><br>
 <br>
-<b>New user area - Done!...</b><br>
+<b>New user area - Done!</b><br>
 New user area, where a new user and password could be created.<br>
 Área de novo usuário, onde pode ser criado um novo usuário e senha.<br>
 <br>

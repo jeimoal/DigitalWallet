@@ -51,8 +51,23 @@ html, body {
 	align-items: center;
 }
 
+.wlLoad {
+	animation: wlLoad .3s;
+}
+
 /*utilites end*/
 
+/*animation start*/
+
+@keyframes wlLoad {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
+/*animation end*/
 
 /*buttons layout start*/
 

@@ -48,10 +48,10 @@ newUser : () => {
 //Object used to create a new user
 
 const nUser = {
-lUser : null, //access html input
-lPsw : null, //access html input
-lSub : null, //access html input button
-message : null, //access html element
+lUser : null,
+lPsw : null,
+lSub : null,
+message : null,
 
 //access the DOM elements and add event handlers
 init : () => {
@@ -127,3 +127,15 @@ function checkPassword() {
 }
 window.addEventListener('load', dwLogin.init);
 window.addEventListener('load', nUser.init);
+
+/* USED TO SHOW THE LOGIN SCREEN
+*sbmtPsw = document.querySelector('#sbmtPsw');
+*sbmtPsw.addEventListener('click', dwLogin.displayLogin);
+*
+*displayLogin : () => {
+*	wrapper = document.querySelector('#wrapper');
+*	pswDiv = document.querySelector('#pswDiv');
+*	wrapper.style.display = 'flex';
+*	pswDiv.style.display = 'none';
+*},
+*/

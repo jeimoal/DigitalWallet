@@ -17,7 +17,7 @@ newWallet : () => {
 	//create wallet container
 	walletsDiv = document.querySelector('#walletsDiv');
 	cardDiv = document.createElement('div');
-	cardDiv.setAttribute('class', 'container flxCol');
+	cardDiv.setAttribute('class', 'container flxCol wlLoad');
 	walletsDiv.appendChild(cardDiv);
 
 	//fig elements

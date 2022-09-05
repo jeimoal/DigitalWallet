@@ -35,7 +35,23 @@ html, body {
 	align-items: center;
 }
 
+.pageLoad {
+	animation: pageLoad 1s;
+}
+
 /*utilites end*/
+
+/*animation start*/
+
+@keyframes pageLoad {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;		
+	}
+}
+
+/*animation end*/
 
 #wrapper, #pswDiv {
 	width: 30rem;
